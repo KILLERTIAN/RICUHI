@@ -1,0 +1,99 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 10vh;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(3, 112, 12, 0.753);
+}
+
+.header .logo {
+    color: aliceblue;
+    letter-spacing: 0.6em;
+    font-weight: 700;
+    margin: 0 30px;
+}
+
+.header .menu {
+    display: flex;
+    position: relative;
+    /* background: blue; */
+    align-items: center;
+    justify-content: center;
+    /* flex-direction: row; */
+}
+
+.header .menu ul {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    /* background: brown; */
+    margin: 0px 50px;
+}
+
+.header .menu ul li {
+    list-style: none;
+    color: rgb(225, 253, 180);
+    margin: 0 15px;
+    font-size: 1.3em;
+    font-weight: 500;
+
+}
+
+.content {
+    width: 100%;
+    height: 90vh;
+    top: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.content h1 {
+    color: white;
+    font-size: 5em;
+    font-weight: 700;
+}
+
+.content h3 {
+    color: rgb(245, 229, 198);
+    font-size: 2em;
+    font-weight: 500;
+}
+
+.content button {
+    height: 40px;
+    width: 90px;
+    margin: 10px;
+    background-color: rgba(119, 170, 37, 0.836);
+    color: white;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+}
+
+.content img {
+    height: 90vh;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
