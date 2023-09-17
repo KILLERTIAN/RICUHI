@@ -1,1 +1,2 @@
 # RICUHI
+Simple travelling website
