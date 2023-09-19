@@ -1,4 +1,4 @@
 # RICUHI
 Simple travelling website
 
-preview
+preview:
