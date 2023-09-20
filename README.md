@@ -2,3 +2,5 @@
 Simple travelling website
 
 preview:
+
+# License
