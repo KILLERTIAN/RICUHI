@@ -3,6 +3,6 @@ Simple travelling website
 
 Link:-
 
-preview:
+Preview:
 
 # License
