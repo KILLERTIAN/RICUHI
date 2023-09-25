@@ -11,58 +11,49 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background-color: red; */
     flex-direction: column;
+    background-color: #f0f0f0; /* Change to your desired background color */
 }
 
 .header {
     display: flex;
     position: sticky;
-    flex-direction: row;
+    top: 0;
+    background-color: rgba(3, 112, 12, 0.753);
     width: 100%;
     height: 10vh;
     align-items: center;
     justify-content: space-between;
-    background-color: rgba(3, 112, 12, 0.753);
+    padding: 0 20px;
+    z-index: 1000; /* Ensure header stays above content */
 }
 
 .header .logo {
     color: aliceblue;
-    letter-spacing: 0.6em;
+    letter-spacing: 0.1em;
     font-weight: 700;
-    margin: 0 30px;
+    font-size: 1.2em; /* Adjust as needed */
 }
 
 .header .menu {
     display: flex;
-    position: relative;
-    /* background: blue; */
     align-items: center;
-    justify-content: center;
-    /* flex-direction: row; */
 }
 
 .header .menu ul {
     display: flex;
-    position: relative;
-    flex-direction: row;
-    /* background: brown; */
-    margin: 0px 50px;
+    list-style-type: none;
+    margin-right: 20px;
 }
 
 .header .menu ul li {
-    list-style: none;
-    color: rgb(225, 253, 180);
     margin: 0 15px;
-    font-size: 1.3em;
-    font-weight: 500;
-    text-decoration: none;
-
 }
+
 .header .menu ul li a {
     color: rgb(225, 253, 180);
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: 500;
     transition: color 0.3s;
 }
@@ -71,26 +62,39 @@ body {
     color: #fff;
 }
 
+.header .hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: rgb(225, 253, 180);
+}
+
 .content {
     width: 100%;
     height: 90vh;
-    top: 10vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
 }
 
 .content h1 {
     color: white;
-    font-size: 5em;
+    font-size: 3.5em;
     font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 .content h3 {
     color: rgb(245, 229, 198);
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: 500;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .content .visit-button {
@@ -98,7 +102,7 @@ body {
     padding: 10px 20px;
     background-color: rgba(3, 112, 12, 0.753);
     color: white;
-    font-size: 1.3em;
+    font-size: 1em;
     border: none;
     border-radius: 15px;
     cursor: pointer;
@@ -115,7 +119,6 @@ body {
     position: absolute;
     z-index: -1;
 }
-
 
 .travel-spots, .cultures, .traditions {
     width: 100%;
@@ -142,14 +145,13 @@ body {
     padding: 20px;
     margin: 10px;
     border-radius: 10px;
-    width: calc(33% - 40px);
+    width: calc(33.33% - 20px);
     text-align: center;
     overflow: hidden;
     position: relative;
 }
 
 .travel-spots .spot img {
-    padding: 0;
     width: 100%;
     border-radius: 10px;
     margin-bottom: 10px;
@@ -168,11 +170,59 @@ body {
 .travel-spots .spot p {
     font-size: 1em;
 }
-
-.cultures p, .traditions p {
-    font-size: 1.2em;
-    color: #666;
+.cultures, .traditions  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
 }
+
+.cultures h2, .traditions h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.culture-item, .tradition-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Adjusted alignment */
+    background-color: rgba(3, 112, 12, 0.753);
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    width: calc(80% - 40px);
+    overflow: hidden;
+    position: relative;
+    text-align: left;
+}
+
+.culture-item img, .tradition-item img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    margin-right: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.culture-item img:hover, .tradition-item img:hover {
+    transform: scale(1.02);
+}
+
+.culture-item h3, .tradition-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.culture-item p, .tradition-item p {
+    font-size: 1em;
+}
+
 
 .footer {
     padding: 20px 0;
@@ -185,4 +235,92 @@ body {
 .footer p {
     margin: 0;
     font-size: 1em;
+}
+
+
+@media (max-width: 1200px) {
+    .travel-spots .spot {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .content h1 {
+
+        font-size: 2.5em;
+
+    }
+    
+    .content h3 {
+
+        font-size: 1em;
+
+    }
+    .header .menu ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(3, 112, 12, 0.753);
+        flex-direction: column;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+        transition: all 0.3s ease; /* Add transition for smooth animation */
+    }
+
+    .header .menu ul.active {
+        display: flex;
+        /* Adjust max-height to accommodate menu items */
+        max-height: 300px;
+        overflow-y: auto; /* Enable scrolling if necessary */
+    }
+
+    .header .hamburger {
+        display: block;
+    }
+
+    .header .menu ul li {
+        margin: 10px 0;
+        text-align: center; /* Center align menu items */
+    }
+
+    .header .menu ul li a {
+        font-size: 1.2em;
+    }
+    .culture-item, .tradition-item{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .header .menu ul {
+        padding: 0;
+    }
+
+    .header .menu ul li {
+        font-size: 1em;
+    }
+
+    .content h1 {
+        font-size: 2em;
+    }
+
+    .content h3 {
+        font-size: 1.2em;
+    }
+
+    .content .visit-button {
+        font-size: 0.8em;
+    }
+
+    .travel-spots .spot {
+        width: calc(100% - 20px);
+    }
+
+    .culture-item, .tradition-item {
+        width: calc(100% - 40px);
+    }
 }
