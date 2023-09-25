@@ -1,9 +1,15 @@
 # RICUHI
-Simple travelling website
+Simple website about Imdian tourism spots, traditions and cultures.
 
-Link:-
+Link:-  https://killertian.github.io/RICUHI/
 
-Preview:-
+Preview:- 
+
+![alt text](image.png)
+
+![alt text](image-1.png)
+
+
 
 # License
 
