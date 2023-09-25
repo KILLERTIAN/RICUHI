@@ -4,39 +4,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RICHI</title>
+    <title>RICUHI</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,400;0,500;1,400&family=Roboto&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@100;400;500&family=Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <section1 class="header">
+    <header class="header">
         <div class="logo">
             <h2>RICUHI</h2>
         </div>
-        <div class="menu">
+        <nav class="menu">
             <ul>
-                <li>Menu</li>
-                <li>Travel spots</li>
-                <li>Cultures</li>
-                <li>Traditions</li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#travel-spots">Travel Spots</a></li>
+                <li><a href="#cultures">Cultures</a></li>
+                <li><a href="#traditions">Traditions</a></li>
             </ul>
-        </div>
-    </section1>
-    <section2 class="content">
-        <h1 class="question">Are you thinking why </h1>
-        <h1>you should visit India ?</h1>
+        </nav>
+    </header>
+
+    <section id="home" class="content">
+        <h1 class="question">Are you thinking why</h1>
+        <h1>you should visit India?</h1>
         <h3 class="answer">Here is all the answer you need</h3>
-        <button class="visit-button">See now</button>
-        <img src="images/cover image.jpg" alt="">
-    </section2>
-    <section3 class="footer"></section3>
+        <button class="visit-button">See Now</button>
+        <img src="images/cover image.jpg" alt="Beautiful scenery of India">
+    </section>
 
+    <section id="travel-spots" class="travel-spots">
+        <h2>Top Travel Spots in India</h2>
+        <div class="spots">
+            <div class="spot">
+                <img src="images/taj_mahal.jpg" alt="Taj Mahal">
+                <h3>Taj Mahal</h3>
+                <p>One of the Seven Wonders of the World.</p>
+            </div>
+            <div class="spot">
+                <img src="images/goa_beach.jpg" alt="Goa Beaches">
+                <h3>Goa Beaches</h3>
+                <p>Famous for its golden beaches and vibrant nightlife.</p>
+            </div>
+            <div class="spot">
+                <img src="images/kerala_backwaters.jpg" alt="Kerala Backwaters">
+                <h3>Kerala Backwaters</h3>
+                <p>Experience the serene backwaters of Kerala.</p>
+            </div>
+        </div>
+    </section>
 
+    <section id="cultures" class="cultures">
+        <h2>Indian Cultures</h2>
+        <p>India is known for its rich and diverse cultural heritage...</p>
+    </section>
+
+    <section id="traditions" class="traditions">
+        <h2>Indian Traditions</h2>
+        <p>Discover the traditional practices and customs of India...</p>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 RICHI. All rights reserved.</p>
+    </footer>
 </body>
 
 </html>
